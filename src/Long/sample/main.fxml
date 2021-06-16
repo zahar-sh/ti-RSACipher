@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Long.sample.Main">
+    <children>
+        <HBox spacing="10.0" style="-fx-background-color: #555;">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Params" textFill="#ffc300">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="Prime number p" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="pTF" text="79" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="Prime number q" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="qTF" text="127" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="Private exp d" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="dTF" text="11" />
+                            </children>
+                        </HBox>
+                        <Label text="Generated" textFill="#ffc300">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text=" f(r)" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="fTF" editable="false" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="Public exp e" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="eTF" editable="false" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" text="Number r" textFill="WHITE" HBox.hgrow="ALWAYS" />
+                                <TextField fx:id="rTF" editable="false" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox spacing="10.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Encode" textFill="#ffc300">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <TextField fx:id="encodeIn" promptText="Input file" text="C:\Users\Zahar\Documents\test\text.txt" />
+                                        <Button mnemonicParsing="false" onAction="#selectEncodeIn" prefWidth="80.0" text="Select" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <TextField fx:id="encodeOut" promptText="Output file" text="C:\Users\Zahar\Documents\test\encode.txt" />
+                                        <Button mnemonicParsing="false" onAction="#selectEncodeOut" prefWidth="80.0" text="Select" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Decode" textFill="#ffc300">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <TextField fx:id="decodeIn" promptText="Input file" text="C:\Users\Zahar\Documents\test\encode.txt" />
+                                        <Button mnemonicParsing="false" onAction="#selectDecodeIn" prefWidth="80.0" text="Select" />
+                                    </children>
+                                </HBox>
+                                <HBox spacing="5.0">
+                                    <children>
+                                        <TextField fx:id="decodeOut" promptText="Output file" text="C:\Users\Zahar\Documents\test\decode.txt" />
+                                        <Button mnemonicParsing="false" onAction="#selectDecodeOut" prefWidth="80.0" text="Select" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <HBox spacing="5.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <children>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#encode" prefWidth="80.0" text="Encode" HBox.hgrow="ALWAYS" />
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#decode" prefWidth="80.0" text="Decode" HBox.hgrow="ALWAYS" />
+                            </children>
+                        </HBox>
+                        <Label fx:id="label" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Label>
+                    </children>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+            </padding>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
